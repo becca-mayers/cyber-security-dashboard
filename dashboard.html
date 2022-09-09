@@ -1,0 +1,653 @@
+<!--
+=========================================================
+* * Cyber Security Dashboard
+=========================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <title>
+    Cyber Security Dashboard
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <link href="assets/css/cyber.css" rel="stylesheet" />
+
+  <!-- Plotly JS -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body class="" data-parallax="true">
+  <div class="wrapper">
+    <div class="main-panel">
+
+      <!-- Navbar -->
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:void(0)">Cyber Security Dashboard</a>
+          </div>
+      <!-- End Navbar -->
+
+      <!-- Row 1 -->
+      <div class="content">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <div class="row">
+                  <div class="col-sm-6 text-left">
+                    <h5 class="card-category">IC3 Reporting</h5>
+                    <h2 class="card-title">Annual Losses (Millions)</h2>
+                  </div>
+                  <div class="col-sm-6">
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="IC3LossesChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+         <div class="row">
+           <div class="col-lg-6">
+             <div class="card card-chart">
+               <div class="card-header">
+                 <h5 class="card-category">Top RCE Platforms, Google Exploits</h5>
+                 <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 3.538% RCEs</h3>
+               </div>
+               <div class="card-body">
+                 <div class="chart-area">
+                   <canvas id="RceChart"></canvas>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="col-lg-6">
+             <div class="card card-chart">
+               <div class="card-header">
+                 <h5 class="card-category">Vendors, Google Exploits</h5>
+                 <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i> 92.982% Other</h3>
+               </div>
+               <div class="card-body">
+                 <div class="chart-area">
+                   <canvas id="VendorChart"></canvas>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+        <!-- Row 3 -->
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card card-plain">
+                 <div>                            <div id="8e61bba5-f3a5-4fce-93ee-fcb59f3924e4" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("8e61bba5-f3a5-4fce-93ee-fcb59f3924e4")) {                    Plotly.newPlot(                        "8e61bba5-f3a5-4fce-93ee-fcb59f3924e4",                        [{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2016<br>state_code=%{location}<br>Loss Amount=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:24:ea5891","marker":{"line":{"width":0}},"name":"","z":[9105997,3656038,28308048,13194518,331962967,37620194,9953436,2061147,2279294,115918202,38071784,3595896,5390617,43723984,12842959,5971680,9477337,15483567,15934635,1748074,35070372,26603026,32916094,17783091,4444416,22764536,3861789,5238672,19332062,4100718,37138818,13469614,167903775,31030642,1090804,27396370,17636067,17310153,37221552,2287403,14650141,1292754,16791819,105128325,8736190,1250149,58077564,32957957,3780690,15064559,1094634],"zsrc":"rebecca.mayers.ms:24:c7ed39","type":"choropleth"}],                        {"coloraxis":{"cmax":1769114788,"cmin":1090804,"colorbar":{"title":{"text":"Loss Amount"}},"colorscale":[[0.0,"Green"],[0.5,"Yellow"],[1.0,"Red"]]},"font":{"color":"#9a9a9a","family":"Sans Serif"},"geo":{"bgcolor":"#27293d","domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"lakecolor":"rgb(21, 126, 174)","projection":{"type":"albers usa"},"scope":"usa","showlakes":true},"legend":{"tracegroupgap":0},"paper_bgcolor":"#27293d","plot_bgcolor":"#27293d","sliders":[{"active":0,"currentvalue":{"prefix":"year="},"len":0.9,"pad":{"b":10,"t":60},"steps":[{"args":[["2016"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2016","method":"animate"},{"args":[["2017"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2017","method":"animate"},{"args":[["2018"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2018","method":"animate"},{"args":[["2019"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2019","method":"animate"},{"args":[["2020"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2020","method":"animate"},{"args":[["2021"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2021","method":"animate"}],"x":0.1,"xanchor":"left","y":0,"yanchor":"top"}],"template":{"data":{"barpolar":[{"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#f2f5fa"},"error_y":{"color":"#f2f5fa"},"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"baxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"line":{"color":"#283442"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"marker":{"line":{"color":"#283442"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#506784"},"line":{"color":"rgb(17,17,17)"}},"header":{"fill":{"color":"#2a3f5f"},"line":{"color":"rgb(17,17,17)"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#f2f5fa","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#f2f5fa"},"geo":{"bgcolor":"rgb(17,17,17)","lakecolor":"rgb(17,17,17)","landcolor":"rgb(17,17,17)","showlakes":true,"showland":true,"subunitcolor":"#506784"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"dark"},"paper_bgcolor":"rgb(17,17,17)","plot_bgcolor":"rgb(17,17,17)","polar":{"angularaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"bgcolor":"rgb(17,17,17)","radialaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"},"yaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"},"zaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"}},"shapedefaults":{"line":{"color":"#f2f5fa"}},"sliderdefaults":{"bgcolor":"#C8D4E3","bordercolor":"rgb(17,17,17)","borderwidth":1,"tickwidth":0},"ternary":{"aaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"baxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"bgcolor":"rgb(17,17,17)","caxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"title":{"x":0.05},"updatemenudefaults":{"bgcolor":"#506784","borderwidth":0},"xaxis":{"automargin":true,"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","zerolinewidth":2}}},"title":{"font":{"color":"#9a9a9a","family":"Sans Serif"},"text":"IC3 State Annual <br><sup>Loss Amount ($)</sup>"},"updatemenus":[{"buttons":[{"args":[null,{"mode":"immediate","frame":{"redraw":true,"duration":500},"transition":{"easing":"linear","duration":500},"fromcurrent":true}],"label":"&#9654;","method":"animate"},{"args":[[null],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"&#9724;","method":"animate"}],"direction":"left","pad":{"r":10,"t":70},"showactive":false,"type":"buttons","x":0.1,"xanchor":"right","y":0,"yanchor":"top"}]},                        {"responsive": true}                    ).then(function(){
+                            Plotly.addFrames('8e61bba5-f3a5-4fce-93ee-fcb59f3924e4', [{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2016<br>state_code=%{location}<br>Loss Amount=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:24:c5ed87","name":"","z":[9105997,3656038,28308048,13194518,331962967,37620194,9953436,2061147,2279294,115918202,38071784,3595896,5390617,43723984,12842959,5971680,9477337,15483567,15934635,1748074,35070372,26603026,32916094,17783091,4444416,22764536,3861789,5238672,19332062,4100718,37138818,13469614,167903775,31030642,1090804,27396370,17636067,17310153,37221552,2287403,14650141,1292754,16791819,105128325,8736190,1250149,58077564,32957957,3780690,15064559,1094634],"zsrc":"rebecca.mayers.ms:24:e59358","type":"choropleth"}],"name":"2016"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2017<br>state_code=%{location}<br>Loss Amount=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:24:d6dc3e","name":"","z":[14444231,2394654,69662776,6889092,278667180,51984166,16991328,4310827,3255134,140012860,48734860,4690971,12286217,56125958,16404743,5180827,6771327,8881535,14436615,1899256,38463702,49191528,32541128,23417363,7974182,27139070,3496154,6654155,28844448,5437889,51620920,5796316,114786381,30142179,2612779,47852172,13551474,14822005,47831606,4309980,20399688,5656341,17249868,153217651,12527402,1848849,43904558,53536633,3166241,18977489,2613880],"zsrc":"rebecca.mayers.ms:24:e51287","type":"choropleth"}],"name":"2017"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2018<br>state_code=%{location}<br>Loss Amount=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:24:41d879","name":"","z":[22601721,4939021,62415074,9288801,625357274,45687355,47774969,4044420,11110863,277571514,79809485,8448477,9222483,121372764,38686695,18566563,20211962,14942027,22497924,3394268,61410023,85057340,101157844,70393782,7099076,33833202,11759081,11815626,43783717,9113087,105753187,11501792,269377099,157204582,3769553,122401497,13367766,43287474,85237963,9641291,26896207,2797179,33971548,270445387,25994271,3342505,60805048,77057223,15412371,38148533,5707866],"zsrc":"rebecca.mayers.ms:24:ab52f8","type":"choropleth"}],"name":"2018"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2019<br>state_code=%{location}<br>Loss Amount=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:24:3805d9","name":"","z":[26010385,11142982,64472204,29294913,793587884,96629605,42153075,7040268,16870630,388067986,112137050,12822618,20250195,131680208,32271382,44857737,23387506,20920043,32038081,6275533,73742285,111776905,59679581,59435533,13952784,38458507,10230081,18319218,49822587,10346513,159089814,20663112,277954109,65685249,5646465,285829814,31795365,60380812,136558111,12109106,27543071,3838791,41627682,281797063,60710704,2970395,130915651,99109990,7811599,27027625,20649235],"zsrc":"rebecca.mayers.ms:24:67dbae","type":"choropleth"}],"name":"2019"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2020<br>state_code=%{location}<br>Loss Amount=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:24:418452","name":"","z":[35227282,8008282,87787498,20151524,827730183,133750625,51361029,9601338,25118380,385127890,138122222,17419709,16071897,178906012,43326283,26753528,26417349,14441873,32826047,9933360,83172467,120719592,116841207,67609006,20429763,131369420,7671188,15062959,55964754,5987308,129784430,30608260,525613595,85344179,47272167,192501044,26686585,59602512,132188302,11044463,31773063,4471377,52380667,442971982,58785690,5068055,136702134,112951433,6249899,46537672,7494059],"zsrc":"rebecca.mayers.ms:24:0a2cae","type":"choropleth"}],"name":"2020"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2021<br>state_code=%{location}<br>Loss Amount=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:24:f61802","name":"","z":[65503044,17455510,163812435,20081425,1769114788,163257920,113202737,19727244,22830886,714836489,198121181,24447088,21668767,242993094,78557294,39590131,34603329,44206229,48497891,9542523,140013223,206364817,232174126,101555612,26890333,66860441,13530225,27702404,127865258,24105632,291421491,15871501,777551509,123864632,26765517,164698310,75553997,92978954,264903325,15071908,54139427,20006217,139319031,854668086,92337257,16351755,226091052,229557989,12831511,64828796,11604646],"zsrc":"rebecca.mayers.ms:24:16e8f0","type":"choropleth"}],"name":"2021"}]);
+                        }).then(function(){
+                            Plotly.animate('8e61bba5-f3a5-4fce-93ee-fcb59f3924e4', null);
+                        })                };                            </script>        </div>
+            </div>
+          </div>
+      <div class="col-lg-4">
+        <div class="card card-plain">
+              <div>                            <div id="ce03df19-1dc7-4347-8709-c5e5432b0d4c" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("ce03df19-1dc7-4347-8709-c5e5432b0d4c")) {                    Plotly.newPlot(                        "ce03df19-1dc7-4347-8709-c5e5432b0d4c",                        [{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2016<br>state_code=%{location}<br>Subject Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:26:f43bec","marker":{"line":{"width":0}},"name":"","z":[1705,274,3115,742,21622,2247,1131,1693,2257,12027,5063,390,471,5458,1686,784,1362,1096,1262,349,4105,1994,3038,1496,1306,1892,685,2866,2473,369,3551,576,11036,2893,369,3468,1624,1495,3458,284,1817,187,2669,15129,1619,247,3499,3895,445,1060,187],"zsrc":"rebecca.mayers.ms:26:a801b0","type":"choropleth"}],                        {"coloraxis":{"cmax":32789,"cmin":110,"colorbar":{"title":{"text":"Subject Count"}},"colorscale":[[0.0,"Green"],[0.5,"Yellow"],[1.0,"Red"]]},"font":{"color":"#9a9a9a","family":"Sans Serif"},"geo":{"bgcolor":"#27293d","domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"lakecolor":"rgb(21, 126, 174)","projection":{"type":"albers usa"},"scope":"usa","showlakes":true},"legend":{"tracegroupgap":0},"paper_bgcolor":"#27293d","plot_bgcolor":"#27293d","sliders":[{"active":0,"currentvalue":{"prefix":"year="},"len":0.9,"pad":{"b":10,"t":60},"steps":[{"args":[["2016"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2016","method":"animate"},{"args":[["2017"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2017","method":"animate"},{"args":[["2018"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2018","method":"animate"},{"args":[["2019"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2019","method":"animate"},{"args":[["2020"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2020","method":"animate"},{"args":[["2021"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2021","method":"animate"}],"x":0.1,"xanchor":"left","y":0,"yanchor":"top"}],"template":{"data":{"barpolar":[{"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#f2f5fa"},"error_y":{"color":"#f2f5fa"},"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"baxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"line":{"color":"#283442"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"marker":{"line":{"color":"#283442"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#506784"},"line":{"color":"rgb(17,17,17)"}},"header":{"fill":{"color":"#2a3f5f"},"line":{"color":"rgb(17,17,17)"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#f2f5fa","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#f2f5fa"},"geo":{"bgcolor":"rgb(17,17,17)","lakecolor":"rgb(17,17,17)","landcolor":"rgb(17,17,17)","showlakes":true,"showland":true,"subunitcolor":"#506784"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"dark"},"paper_bgcolor":"rgb(17,17,17)","plot_bgcolor":"rgb(17,17,17)","polar":{"angularaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"bgcolor":"rgb(17,17,17)","radialaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"},"yaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"},"zaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"}},"shapedefaults":{"line":{"color":"#f2f5fa"}},"sliderdefaults":{"bgcolor":"#C8D4E3","bordercolor":"rgb(17,17,17)","borderwidth":1,"tickwidth":0},"ternary":{"aaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"baxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"bgcolor":"rgb(17,17,17)","caxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"title":{"x":0.05},"updatemenudefaults":{"bgcolor":"#506784","borderwidth":0},"xaxis":{"automargin":true,"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","zerolinewidth":2}}},"title":{"font":{"color":"#9a9a9a","family":"Sans Serif"},"text":"IC3 State Annual <br><sup>Subjects</sup>"},"updatemenus":[{"buttons":[{"args":[null,{"mode":"immediate","frame":{"redraw":true,"duration":500},"transition":{"easing":"linear","duration":500},"fromcurrent":true}],"label":"&#9654;","method":"animate"},{"args":[[null],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"&#9724;","method":"animate"}],"direction":"left","pad":{"r":10,"t":70},"showactive":false,"type":"buttons","x":0.1,"xanchor":"right","y":0,"yanchor":"top"}]},                        {"responsive": true}                    ).then(function(){
+                            Plotly.addFrames('ce03df19-1dc7-4347-8709-c5e5432b0d4c', [{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2016<br>state_code=%{location}<br>Subject Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:26:680c73","name":"","z":[1705,274,3115,742,21622,2247,1131,1693,2257,12027,5063,390,471,5458,1686,784,1362,1096,1262,349,4105,1994,3038,1496,1306,1892,685,2866,2473,369,3551,576,11036,2893,369,3468,1624,1495,3458,284,1817,187,2669,15129,1619,247,3499,3895,445,1060,187],"zsrc":"rebecca.mayers.ms:26:a96ca5","type":"choropleth"}],"name":"2016"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2017<br>state_code=%{location}<br>Subject Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:26:f336fb","name":"","z":[1330,334,2580,715,20394,1959,913,1144,1364,11643,4455,315,369,4751,1585,835,1191,953,2015,344,3786,1901,2593,1348,879,1780,799,2536,2943,246,3873,424,10064,2511,376,3294,1411,1569,3158,266,1587,195,1913,11957,1038,110,4644,3341,511,985,230],"zsrc":"rebecca.mayers.ms:26:7a5f7a","type":"choropleth"}],"name":"2017"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2018<br>state_code=%{location}<br>Subject Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:26:9b9180","name":"","z":[1496,370,3205,710,22886,2453,947,1142,1421,13321,4636,447,507,5292,1758,797,1233,1164,1309,348,5068,2144,3160,1372,949,2018,934,2071,3197,359,5075,617,10682,2943,432,3225,1252,1717,3763,400,1664,232,2629,13870,1178,202,8771,3897,400,1237,200],"zsrc":"rebecca.mayers.ms:26:b0c512","type":"choropleth"}],"name":"2018"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2019<br>state_code=%{location}<br>Subject Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:26:072fde","name":"","z":[1422,304,2967,697,23141,2461,1111,1212,1158,14922,4440,636,535,4598,2401,792,1316,1059,1422,426,7854,1956,2732,1656,953,1904,1049,1514,3129,339,4386,1077,11108,2968,452,3241,1253,1635,3708,322,1577,172,2716,13287,1205,171,5722,4162,366,1291,235],"zsrc":"rebecca.mayers.ms:26:e249d0","type":"choropleth"}],"name":"2019"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2020<br>state_code=%{location}<br>Subject Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:26:2e67b4","name":"","z":[1900,372,3794,955,31130,2979,1205,1239,1443,22549,5305,547,556,5707,2554,893,1451,1390,1468,900,7793,2585,3278,2076,1026,2291,1981,2029,4421,434,11611,1045,12151,3489,505,4508,1992,1824,4860,394,1683,263,2871,15431,1550,201,4720,4601,566,1657,331],"zsrc":"rebecca.mayers.ms:26:f79f3a","type":"choropleth"}],"name":"2020"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2021<br>state_code=%{location}<br>Subject Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:26:ddc1d2","name":"","z":[1842,493,4164,978,32789,3369,1661,1088,1276,13966,5375,532,547,5395,2291,864,1076,1506,1643,621,5653,2426,3120,1825,893,2009,812,1354,3873,554,4622,1015,13216,3906,378,5988,2130,1913,5885,369,1635,268,2806,16004,1323,215,4145,4238,953,1554,300],"zsrc":"rebecca.mayers.ms:26:9d72d7","type":"choropleth"}],"name":"2021"}]);
+                        }).then(function(){
+                            Plotly.animate('ce03df19-1dc7-4347-8709-c5e5432b0d4c', null);
+                        })                };                            </script>        </div>
+        </div>
+      </div>
+     <div class="col-lg-4">
+       <div class="card card-plain">
+             <div>                            <div id="0b35b291-ad44-440d-9253-38fb6e320294" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("0b35b291-ad44-440d-9253-38fb6e320294")) {                    Plotly.newPlot(                        "0b35b291-ad44-440d-9253-38fb6e320294",                        [{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2016<br>state_code=%{location}<br>Victim Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:25:22e561","marker":{"line":{"width":0}},"name":"","z":[5162,1588,9047,2652,55001,9144,3639,1012,1312,29983,9581,1426,1557,12741,6259,2224,2740,3735,4226,1074,11204,6931,9036,4790,2071,5776,1072,1438,5383,1576,9484,2389,23461,9147,492,9966,3500,5363,11645,926,4883,509,6605,29900,3234,622,11177,9571,1665,5225,615],"zsrc":"rebecca.mayers.ms:25:0c2ff3","type":"choropleth"}],                        {"coloraxis":{"cmax":83790,"cmin":491,"colorbar":{"title":{"text":"Victim Count"}},"colorscale":[[0.0,"Green"],[0.5,"Yellow"],[1.0,"Red"]]},"font":{"color":"#9a9a9a","family":"Sans Serif"},"geo":{"bgcolor":"#27293d","domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"lakecolor":"rgb(21, 126, 174)","projection":{"type":"albers usa"},"scope":"usa","showlakes":true},"legend":{"tracegroupgap":0},"paper_bgcolor":"#27293d","plot_bgcolor":"#27293d","sliders":[{"active":0,"currentvalue":{"prefix":"year="},"len":0.9,"pad":{"b":10,"t":60},"steps":[{"args":[["2016"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2016","method":"animate"},{"args":[["2017"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2017","method":"animate"},{"args":[["2018"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2018","method":"animate"},{"args":[["2019"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2019","method":"animate"},{"args":[["2020"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2020","method":"animate"},{"args":[["2021"],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"2021","method":"animate"}],"x":0.1,"xanchor":"left","y":0,"yanchor":"top"}],"template":{"data":{"barpolar":[{"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#f2f5fa"},"error_y":{"color":"#f2f5fa"},"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"baxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"line":{"color":"#283442"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"marker":{"line":{"color":"#283442"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#506784"},"line":{"color":"rgb(17,17,17)"}},"header":{"fill":{"color":"#2a3f5f"},"line":{"color":"rgb(17,17,17)"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#f2f5fa","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#f2f5fa"},"geo":{"bgcolor":"rgb(17,17,17)","lakecolor":"rgb(17,17,17)","landcolor":"rgb(17,17,17)","showlakes":true,"showland":true,"subunitcolor":"#506784"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"dark"},"paper_bgcolor":"rgb(17,17,17)","plot_bgcolor":"rgb(17,17,17)","polar":{"angularaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"bgcolor":"rgb(17,17,17)","radialaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"},"yaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"},"zaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"}},"shapedefaults":{"line":{"color":"#f2f5fa"}},"sliderdefaults":{"bgcolor":"#C8D4E3","bordercolor":"rgb(17,17,17)","borderwidth":1,"tickwidth":0},"ternary":{"aaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"baxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"bgcolor":"rgb(17,17,17)","caxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"title":{"x":0.05},"updatemenudefaults":{"bgcolor":"#506784","borderwidth":0},"xaxis":{"automargin":true,"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","zerolinewidth":2}}},"title":{"font":{"color":"#9a9a9a","family":"Sans Serif"},"text":"IC3 State Annual <br><sup>Victims</sup>"},"updatemenus":[{"buttons":[{"args":[null,{"mode":"immediate","frame":{"redraw":true,"duration":500},"transition":{"easing":"linear","duration":500},"fromcurrent":true}],"label":"&#9654;","method":"animate"},{"args":[[null],{"mode":"immediate","frame":{"redraw":true,"duration":0},"transition":{"easing":"linear","duration":0},"fromcurrent":true}],"label":"&#9724;","method":"animate"}],"direction":"left","pad":{"r":10,"t":70},"showactive":false,"type":"buttons","x":0.1,"xanchor":"right","y":0,"yanchor":"top"}]},                        {"responsive": true}                    ).then(function(){
+                            Plotly.addFrames('0b35b291-ad44-440d-9253-38fb6e320294', [{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2016<br>state_code=%{location}<br>Victim Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:25:9ac9c6","name":"","z":[5162,1588,9047,2652,55001,9144,3639,1012,1312,29983,9581,1426,1557,12741,6259,2224,2740,3735,4226,1074,11204,6931,9036,4790,2071,5776,1072,1438,5383,1576,9484,2389,23461,9147,492,9966,3500,5363,11645,926,4883,509,6605,29900,3234,622,11177,9571,1665,5225,615],"zsrc":"rebecca.mayers.ms:25:ecdacb","type":"choropleth"}],"name":"2016"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2017<br>state_code=%{location}<br>Victim Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:25:b1709e","name":"","z":[5282,1807,8994,2459,56416,10738,3554,1030,1500,29942,9382,3271,1653,12351,5548,2140,2414,3781,4389,1020,8777,7137,8682,4909,2322,5822,1033,1572,6617,1508,10053,2017,23371,9830,491,10832,3887,4741,14578,888,5034,539,6481,29403,3136,625,12432,10295,1499,7487,605],"zsrc":"rebecca.mayers.ms:25:435baf","type":"choropleth"}],"name":"2017"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2018<br>state_code=%{location}<br>Victim Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:25:270ac1","name":"","z":[6610,2538,13322,2778,75680,13750,4842,1370,2230,37138,13847,1785,2465,15240,7073,2888,3418,4310,5154,1369,12683,9877,11391,6817,2681,8765,1323,1883,8021,1729,13497,3414,28434,12126,685,11981,4020,7331,16554,1531,5681,744,8124,38057,4863,876,21058,16153,1721,9487,808],"zsrc":"rebecca.mayers.ms:25:cfa7d8","type":"choropleth"}],"name":"2018"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2019<br>state_code=%{location}<br>Victim Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:25:06f95b","name":"","z":[5568,2024,11561,2669,69027,12702,5832,1450,1904,37038,12225,2006,2130,13878,11509,5709,2990,4199,5015,1230,14588,9156,11226,6198,2242,7594,1418,1910,8716,1653,12788,2808,28859,11636,675,12717,4088,6866,15182,1360,5986,671,7607,37111,4615,670,15959,16741,1652,9142,733],"zsrc":"rebecca.mayers.ms:25:bb2c3d","type":"choropleth"}],"name":"2019"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2020<br>state_code=%{location}<br>Victim Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:25:3d7dd5","name":"","z":[6912,2558,16436,4763,83790,14547,6693,2479,2557,61713,15914,2334,2696,22922,13999,9883,4182,7565,5825,1856,16931,13454,14844,8344,2949,9872,1623,2623,18089,2461,18184,4030,41145,14803,900,15886,5539,8168,22231,1979,7119,946,10055,46121,6210,1026,17169,20303,2313,10693,1110],"zsrc":"rebecca.mayers.ms:25:5765a4","type":"choropleth"}],"name":"2020"},{"data":[{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"year=2021<br>state_code=%{location}<br>Victim Count=%{z}<extra></extra>","locationmode":"USA-states","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationssrc":"rebecca.mayers.ms:25:e6a02a","name":"","z":[6573,2149,14860,3318,82421,12538,5491,2414,2462,54162,14331,2001,2291,20975,12786,9341,3263,8030,5119,1755,13723,11082,13105,7131,2663,11053,1442,2788,19766,1836,15663,3165,35747,12693,836,20571,4995,7287,20450,1441,6594,1108,8677,49119,5267,868,14533,16582,2493,10348,898],"zsrc":"rebecca.mayers.ms:25:3b5ff4","type":"choropleth"}],"name":"2021"}]);
+                        }).then(function(){
+                            Plotly.animate('0b35b291-ad44-440d-9253-38fb6e320294', null);
+                        })                };                            </script>        </div>
+       </div>
+     </div>
+   </div>
+
+        <!-- Row 4 -->
+        <div class="row">
+         <div class="col-lg-4">
+           <div class="card card-chart">
+             <div class="card-header">
+               <h5 class="card-category">CVE Score (Avg)</h5>
+               <h3 class="card-title"><i class="tim-icons icon-zoom-split text-info"></i> 5.491</h3>
+             </div>
+             <div class="card-body">
+               <div class="chart-area">
+                 <canvas id="CVEAvgScoreChart"></canvas>
+               </div>
+             </div>
+           </div>
+         </div>
+        <div class="col-lg-8">
+          <div class="card card-chart">
+             <div class="card-header">
+                <h5 class="card-category">CVE Complexity</h5>
+                <h3 class="card-title"><i class="tim-icons icon-app text-primary"></i> 5.902 Low</h3>
+             </div>
+               <div class="card-body">
+                 <div class="chart-area">
+                   <canvas id="CVEComplexityChart"></canvas>
+                 </div>
+               </div>
+             </div>
+           </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="row">
+            <div class="col-lg-6">
+              <div class="card ">
+                <div class="card-header">
+                  <h4 class="card-title"><i class="tim-icons icon-notes text-info"></i> Top CVE Details, 2021-2022</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table tablesorter " id="scroll">
+                      <thead class=" text-primary">
+                      
+
+                          <th class="text-center"> Year</th>
+
+                      
+
+                          <th class="text-center"> Vulnerability</th>
+
+                      
+
+                          <th class="text-center"> Count</th>
+
+                      
+
+                          <th class="text-center"> Annual Percentage (%)</th>
+
+                      
+
+                      </thead>
+                         <tbody>
+                             
+                                <tr>
+                                     
+
+                                          <td class="text-center">2021</td>
+
+                                     
+
+                                          <td class="text-center">Exec Code</td>
+
+                                     
+
+                                          <td class="text-center">2359.0</td>
+
+                                     
+
+                                          <td class="text-center">3.398</td>
+
+                                     
+
+                                </tr>
+
+                             
+                                <tr>
+                                     
+
+                                          <td class="text-center">2021</td>
+
+                                     
+
+                                          <td class="text-center">XSS</td>
+
+                                     
+
+                                          <td class="text-center">2272.0</td>
+
+                                     
+
+                                          <td class="text-center">3.273</td>
+
+                                     
+
+                                </tr>
+
+                             
+                                <tr>
+                                     
+
+                                          <td class="text-center">2022</td>
+
+                                     
+
+                                          <td class="text-center">XSS</td>
+
+                                     
+
+                                          <td class="text-center">1902.0</td>
+
+                                     
+
+                                          <td class="text-center">2.74</td>
+
+                                     
+
+                                </tr>
+
+                             
+                                <tr>
+                                     
+
+                                          <td class="text-center">2022</td>
+
+                                     
+
+                                          <td class="text-center">Exec Code</td>
+
+                                     
+
+                                          <td class="text-center">1882.0</td>
+
+                                     
+
+                                          <td class="text-center">2.711</td>
+
+                                     
+
+                                </tr>
+
+                             
+                                <tr>
+                                     
+
+                                          <td class="text-center">2021</td>
+
+                                     
+
+                                          <td class="text-center">DoS</td>
+
+                                     
+
+                                          <td class="text-center">1275.0</td>
+
+                                     
+
+                                          <td class="text-center">1.837</td>
+
+                                     
+
+                                </tr>
+
+                             
+                                <tr>
+                                     
+
+                                          <td class="text-center">2022</td>
+
+                                     
+
+                                          <td class="text-center">Sql</td>
+
+                                     
+
+                                          <td class="text-center">1071.0</td>
+
+                                     
+
+                                          <td class="text-center">1.543</td>
+
+                                     
+
+                                </tr>
+
+                             
+                                <tr>
+                                     
+
+                                          <td class="text-center">2022</td>
+
+                                     
+
+                                          <td class="text-center">DoS</td>
+
+                                     
+
+                                          <td class="text-center">951.0</td>
+
+                                     
+
+                                          <td class="text-center">1.37</td>
+
+                                     
+
+                                </tr>
+
+                             
+                                <tr>
+                                     
+
+                                          <td class="text-center">2022</td>
+
+                                     
+
+                                          <td class="text-center">Overflow</td>
+
+                                     
+
+                                          <td class="text-center">878.0</td>
+
+                                     
+
+                                          <td class="text-center">1.265</td>
+
+                                     
+
+                                </tr>
+
+                             
+
+                        </tbody>
+                     </table>
+                    </div>
+                 </div>
+              </div>
+            </div>
+           <div class="col-lg-6">
+             <div class="card ">
+               <div class="card-header">
+                 <h4 class="card-title"><i class="tim-icons icon-atom text-primary"></i> Google Exploits, 2021-2022</h4>
+               </div>
+               <div class="card-body">
+                 <div class="table-responsive">
+                   <table class="table tablesorter " id="scroll">
+                     <thead class=" text-primary">
+
+                         
+
+                             <th class="text-center"> Year</th>
+
+                         
+
+                             <th class="text-center"> Method</th>
+
+                         
+
+                             <th class="text-center"> Count</th>
+
+                         
+
+                             <th class="text-center"> Annual Percentage (%)</th>
+
+                         
+
+                     </thead>
+                        <tbody>
+
+                             
+
+                                <tr>
+
+                                     
+
+                                          <td class="text-center"> 2021</td>
+
+                                      
+
+                                          <td class="text-center"> WebApps</td>
+
+                                      
+
+                                          <td class="text-center"> 904</td>
+
+                                      
+
+                                          <td class="text-center"> 2.027</td>
+
+                                      
+
+                                </tr>
+
+                              
+
+                                <tr>
+
+                                     
+
+                                          <td class="text-center"> 2022</td>
+
+                                      
+
+                                          <td class="text-center"> WebApps</td>
+
+                                      
+
+                                          <td class="text-center"> 179</td>
+
+                                      
+
+                                          <td class="text-center"> 0.401</td>
+
+                                      
+
+                                </tr>
+
+                              
+
+                                <tr>
+
+                                     
+
+                                          <td class="text-center"> 2021</td>
+
+                                      
+
+                                          <td class="text-center"> Local</td>
+
+                                      
+
+                                          <td class="text-center"> 149</td>
+
+                                      
+
+                                          <td class="text-center"> 0.334</td>
+
+                                      
+
+                                </tr>
+
+                              
+
+                                <tr>
+
+                                     
+
+                                          <td class="text-center"> 2022</td>
+
+                                      
+
+                                          <td class="text-center"> Local</td>
+
+                                      
+
+                                          <td class="text-center"> 52</td>
+
+                                      
+
+                                          <td class="text-center"> 0.117</td>
+
+                                      
+
+                                </tr>
+
+                              
+
+                                <tr>
+
+                                     
+
+                                          <td class="text-center"> 2021</td>
+
+                                      
+
+                                          <td class="text-center"> Remote</td>
+
+                                      
+
+                                          <td class="text-center"> 48</td>
+
+                                      
+
+                                          <td class="text-center"> 0.108</td>
+
+                                      
+
+                                </tr>
+
+                              
+
+                                <tr>
+
+                                     
+
+                                          <td class="text-center"> 2021</td>
+
+                                      
+
+                                          <td class="text-center"> DoS</td>
+
+                                      
+
+                                          <td class="text-center"> 42</td>
+
+                                      
+
+                                          <td class="text-center"> 0.094</td>
+
+                                      
+
+                                </tr>
+
+                              
+
+                                <tr>
+
+                                     
+
+                                          <td class="text-center"> 2022</td>
+
+                                      
+
+                                          <td class="text-center"> Remote</td>
+
+                                      
+
+                                          <td class="text-center"> 38</td>
+
+                                      
+
+                                          <td class="text-center"> 0.085</td>
+
+                                      
+
+                                </tr>
+
+                              
+
+                                <tr>
+
+                                     
+
+                                          <td class="text-center"> 2022</td>
+
+                                      
+
+                                          <td class="text-center"> DoS</td>
+
+                                      
+
+                                          <td class="text-center"> 1</td>
+
+                                      
+
+                                          <td class="text-center"> 0.002</td>
+
+                                      
+
+                                </tr>
+
+                              
+
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+        </div>
+
+     <!-- Footer -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <ul class="nav">
+            <li class="nav-item">
+              Created by
+                <a href="https://www.beccamayers.com/" target="_blank">REBECCA MAYERS</a>
+            </li>
+            <li class="nav-item">
+               |
+            </li>
+            <li class="nav-item">
+              Inspired by
+                <a href="https://www.creative-tim.com/" target="_blank">CREATIVE TIM</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!--Core JS Files-->
+  <script src="assets/js/core/jquery.min.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--Chart JS-->
+  <script src="assets/js/plugins/chartjs.min.js"></script>
+  <!--Control Center for  parallax effects, scripts, etc -->
+  <script src="assets/js/black-dashboard.min.js?v=1.0.0"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="assets/js/updated.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in updated.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+  <script>
+      $(document).ready(function () {
+      $('#scroll').DataTable({
+          scrollY: '200px',
+          scrollCollapse: true,
+          paging: false,
+      });
+   });
+   </script>
+</body>
+
+</html>
